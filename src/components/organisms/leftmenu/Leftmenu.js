@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Menuitem from '../../atoms/menuitem/Menuitem';
 import Api from '../../../logic/Api';
+import RenderLeftMenu from './RenderLeftMenu';
+//TODO:: Move getMenuItems to General context.
 
 const Leftmenu = props => {
-    const[items, setItems] = useState();
+    const[items, setItems] = useState([]);
 
     useEffect(() => {
         Api.getMenuItems()
@@ -20,18 +21,8 @@ const Leftmenu = props => {
     );
 
     return (
-        <ul className="asideMenu reset-list">
-            {
-                items && items.map((item, index) => {
-                    return <Menuitem
-                        url={ item.url.path }
-                        label={ item.label }
-                        key={ index }
-                        path={ item.url.path }
-                        type="shevron"
-                    />
-                })}
-        </ul>);
+        <RenderLeftMenu items={items} />
+    );
 };
 
 export default Leftmenu;

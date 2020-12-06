@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types';
 
 const Input = props => {
     const inputClasses = ['InputElement'];
@@ -11,6 +12,13 @@ const Input = props => {
             onKeyDown={props.keydown}
         />
     );
+}
+
+Input.propTypes = {
+    elementConfig: propTypes.object,
+    value: propTypes.string,
+    changed: propTypes.func.isRequired,
+    keydown: propTypes.func.isRequired
 }
 
 export default Input;

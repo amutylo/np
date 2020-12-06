@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const Sidebar = (props) => (
     <div className="sidebar">
@@ -7,5 +8,9 @@ const Sidebar = (props) => (
         </div>
     </div>
 );
+
+Sidebar.propTypes = {
+    children: propTypes.element.isRequired
+}
 
 export default Sidebar;

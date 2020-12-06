@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types';
 import Menuitem from "../../atoms/menuitem/Menuitem";
 
 const RenderCategoryMenu = props => (
@@ -20,5 +21,8 @@ const RenderCategoryMenu = props => (
         </ul>
     </div>
 );
+RenderCategoryMenu.propTypes = {
+    items: propTypes.arrayOf(propTypes.object).isRequired
+}
 
 export default RenderCategoryMenu;

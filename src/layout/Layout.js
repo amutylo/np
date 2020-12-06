@@ -20,7 +20,7 @@ const logoData = {
     src: logo
 };
 
-const Layout = props => (
+const Layout = () => (
     <div>
         <Sidebar>
             <Logo>
