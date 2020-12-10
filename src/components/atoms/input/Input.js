@@ -17,8 +17,8 @@ const Input = props => {
 Input.propTypes = {
     elementConfig: propTypes.object,
     value: propTypes.string,
-    changed: propTypes.func.isRequired,
-    keydown: propTypes.func.isRequired
+    changed: propTypes.func,
+    keydown: propTypes.func
 }
 
 export default Input;

@@ -8,7 +8,7 @@ const Footer = (props) =>  (
 );
 
 Footer.propTypes = {
-    children: propTypes.element.isRequired
+    children: propTypes.array
 }
 
 export default Footer;

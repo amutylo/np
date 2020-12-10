@@ -8,7 +8,7 @@ const Wrapper = props => (
 );
 
 Wrapper.propTypes = {
-    children: propTypes.element.isRequired
+    children: propTypes.arrayOf(propTypes.element).isRequired
 }
 
 export default Wrapper;

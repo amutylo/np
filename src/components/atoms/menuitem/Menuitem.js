@@ -17,7 +17,7 @@ const Menuitem = props => (
 );
 
 Menuitem.propTypes = {
-    liClass: propTypes.string.isRequired,
+    liClass: propTypes.string,
     url: propTypes.string,
     path: propTypes.string,
     label: propTypes.string.isRequired,

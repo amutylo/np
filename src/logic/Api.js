@@ -1,14 +1,12 @@
-import axiosInstance from './../axios/AuthAxios';
+import axiosInstance from "./../axios/AuthAxios";
 
+const GRAPHQL = "/graphql";
+const MOSTPOPULAR = "/rest/api/popular_articles";
+const CONTACTUS = "/rest/api/contact_callback";
 
-const GRAPHQL = '/graphql';
-const MOSTPOPULAR = '/rest/api/popular_articles';
-const CONTACTUS = '/rest/api/contact_callback';
-
-const NPApi = {
-    getMenuItems: async function() {
-        return await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `query {
+export const getMenuItems = async () => {
+  return await axiosInstance.post(`${GRAPHQL}`, {
+    query: `query {
           menuByName(name: "footer") {
             links {
               label
@@ -18,11 +16,12 @@ const NPApi = {
             }
           }
         }`,
-        });
-    },
-    getCategoryMenuItems: async function() {
-        const response = await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `query categoryListTerms($limit:Int!, $offset:Int!, $vid:String!){
+  });
+};
+
+export const getCategoryMenuItems = async () => {
+  const response = await axiosInstance.post(`${GRAPHQL}`, {
+    query: `query categoryListTerms($limit:Int!, $offset:Int!, $vid:String!){
         taxonomyTermQuery(limit: $limit, offset: $offset,
           filter: {conditions: [{operator: EQUAL, field: "vid", value: [$vid]}]})
         {
@@ -39,17 +38,18 @@ const NPApi = {
           }
         }
       }`,
-            variables: {
-                limit: 20,
-                offset: 0,
-                vid: 'category',
-            },
-        });
-        return response;
+    variables: {
+      limit: 20,
+      offset: 0,
+      vid: "category",
     },
-    getNodeByUrl: async function(slug) {
-        return await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `query getNodeByPath($path:String!){
+  });
+  return response;
+};
+
+export const getNodeByUrl = async (slug) => {
+  return await axiosInstance.post(`${GRAPHQL}`, {
+    query: `query getNodeByPath($path:String!){
         route(path:$path){
             ... on EntityCanonicalUrl {
             entity {
@@ -106,30 +106,32 @@ const NPApi = {
           path
         }
       }`,
-            variables: {
-                path: slug,
-            },
-        });
+    variables: {
+      path: slug,
     },
-    getNodeById: async function(id) {
-        return await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `
+  });
+};
+
+export const getNodeById = async (id) => {
+  return await axiosInstance.post(`${GRAPHQL}`, {
+    query: `
         query {
-          nodeById(id: ${ id.toString() }) {
+          nodeById(id: ${id.toString()}) {
             entityLabel
             entityBundle
           }
         }
       `,
-        });
-    },
-    getCategoryList: async function(categories) {
-        //TODO::Remove conditional statement.
-        if (!categories || !categories.length) {
-            return [];
-        }
-        return await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `
+  });
+};
+
+export const getCategoryList = async (categories) => {
+  //TODO::Remove conditional statement.
+  if (!categories || !categories.length) {
+    return [];
+  }
+  return await axiosInstance.post(`${GRAPHQL}`, {
+    query: `
       query getArticleByCategory($categories: [String]!, $limit:Int!, $offset:Int!){
         nodeQuery(limit: $limit, offset: $offset, filter: {
           conjunction: AND
@@ -176,22 +178,24 @@ const NPApi = {
           path
         }
       }`,
-            variables: {
-                limit: 20,
-                offset: 0,
-                categories: categories,
-            },
-        });
+    variables: {
+      limit: 20,
+      offset: 0,
+      categories: categories,
     },
-    getMostPopular: async function() {
-        return await axiosInstance.get(`${ MOSTPOPULAR }`);
-    },
-    getSearch: async function(param) {
-        //TODO::Remove string concatenation.
-        const payload = '%' + param + '%';
+  });
+};
 
-        return await axiosInstance.post(`${ GRAPHQL }`, {
-            query: `
+export const getMostPopular = async () => {
+  return await axiosInstance.get(`${MOSTPOPULAR}`);
+};
+
+export const getSearch = async (param) => {
+  //TODO::Remove string concatenation.
+  const payload = "%" + param + "%";
+
+  return await axiosInstance.post(`${GRAPHQL}`, {
+    query: `
       query searchNewsArticles($query:String!, $limit:Int!, $offset:Int!){
         nodeQuery(limit: $limit, offset: $offset, filter: {
          conjunction: AND,
@@ -238,16 +242,14 @@ const NPApi = {
          path
        }
      }`,
-            variables: {
-                query: payload,
-                limit: 12,
-                offset: 0,
-            },
-        });
+    variables: {
+      query: payload,
+      limit: 12,
+      offset: 0,
     },
-    sendContactUs: async function(data) {
-        return await axiosInstance.post(`${ CONTACTUS }`, { data });
-    },
+  });
 };
 
-export default NPApi;
+export const sendContactUs = async (data) => {
+  return await axiosInstance.post(`${CONTACTUS}`, { data });
+};

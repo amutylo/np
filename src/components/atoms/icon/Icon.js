@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 const Icon = props => {
@@ -9,10 +9,10 @@ const Icon = props => {
         return (<i className={ `fa ${ props.iconClass } ${ props.iconPosClass }` } aria-hidden="true" />);
 }
 
-Icon.PropTypes = {
-    type: PropTypes.string,
-    iconClass: PropTypes.string,
-    iconPosClass: PropTypes.string
+Icon.propTypes = {
+    type: propTypes.string,
+    iconClass: propTypes.string,
+    iconPosClass: propTypes.string
 }
 
 export default Icon;
