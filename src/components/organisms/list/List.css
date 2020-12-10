@@ -1,0 +1,9 @@
+.news-wrapper {
+  margin: 0 -15px;
+}
+
+@media (max-width: 1365px) {
+  .news-wrapper {
+    margin: 0 -10px;
+  }
+}

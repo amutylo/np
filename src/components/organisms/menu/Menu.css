@@ -1,0 +1,23 @@
+.asideMenu {
+  margin-bottom: 15px;
+  /* composes: reset-list from "../../index.css"; */
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.asideMenu li {
+  padding: 3px 0;
+}
+
+.asideMenu a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.asideMenu a:hover {
+  text-decoration: underline;
+}

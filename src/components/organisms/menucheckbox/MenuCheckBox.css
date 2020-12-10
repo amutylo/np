@@ -1,0 +1,26 @@
+.checkbox {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  margin-top: -12.5px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 11px;
+  padding: 4px 0 0 1px;
+}
+
+.active {
+  background: #55bca6;
+  border-color: #55bca6;
+}
+
+@media (max-width: 767px) {
+  .checkbox {
+    right: 15px;
+  }
+}

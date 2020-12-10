@@ -1,0 +1,91 @@
+.Input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* .InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  } */
+
+.InputElement {
+  padding: 0 15px;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Lato";
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.InputElement:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+.Invalid {
+  border: 1px solid red;
+  background-color: #fda49a;
+}
+
+.form-required::after {
+  content: "\f069";
+  font-family: "fontawesome";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 8px;
+  margin: 0 0.3em;
+  display: inline-block;
+  color: #757575;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-family: "Lato";
+  text-transform: uppercase;
+}
+
+.text-area {
+  padding: 15px;
+  height: 210px;
+  border: 1px solid #eee;
+  resize: vertical;
+  width: 100%;
+  font-family: "Lato";
+  font-size: 16px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form-checkbox {
+  display: none;
+}
+
+.form-checkbox:checked + .label::before {
+  background: #55bca6;
+  border: 1px solid #55bca6;
+}
+
+.form-checkbox:checked + .label::after {
+  display: block;
+}

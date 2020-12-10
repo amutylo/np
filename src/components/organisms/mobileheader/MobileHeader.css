@@ -1,0 +1,40 @@
+.mobile {
+  display: none;
+}
+
+.mobile h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  font-size: 28px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 40px;
+}
+
+.btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 29px;
+  cursor: pointer;
+}
+
+@media (max-width: 1365px) {
+  .mobile {
+    display: block;
+    position: relative;
+    color: #fff;
+  }
+
+  .open-search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

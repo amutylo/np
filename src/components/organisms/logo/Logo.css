@@ -1,0 +1,24 @@
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  width: 270px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+@media (max-width: 1365px) {
+  .logo {
+    top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 225px;
+    top: 15px;
+    left: 15px;
+  }
+}

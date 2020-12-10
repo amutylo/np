@@ -14,6 +14,8 @@ import Content from "../components/organisms/content/Content";
 import Header from "../components/organisms/header/Header";
 import SearchForm from "../components/organisms/searchform/SearchForm";
 import CategoryContextProvider from "../contexts/CategoryContext";
+import MobilHeader from "../components/organisms/mobileheader/MobileHeader";
+import List from "../components/organisms/list/List";
 
 const logoData = {
   src: logo,
@@ -43,11 +45,12 @@ const Layout = () => (
     </Sidebar>
     <Wrapper>
       <Header>
-        <div className="search">
-          <SearchForm />
-        </div>
+        <MobilHeader />
+        <SearchForm />
       </Header>
-      <Content></Content>
+      <Content>
+        <List />
+      </Content>
     </Wrapper>
   </div>
 );

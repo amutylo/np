@@ -1,0 +1,47 @@
+.main-nav {
+  height: 100%;
+  overflow: auto;
+}
+
+.nav-list {
+  composes: reset-list from "../../index.css";
+}
+
+.main-nav li:first-child {
+  border-top: 1px solid #eee;
+}
+
+.main-nav button {
+  width: 100%;
+  background: #55bca6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.main-nav button:hover {
+  background: #4da592;
+}
+
+.main-nav button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.save-settings {
+  padding-top: 10px;
+}
+
+.settings-description {
+  font-size: 14px;
+  color: #424242;
+  padding: 0 26px;
+  margin-bottom: 15px;
+}
+
+.btn-wrapper {
+  padding: 0 25px;
+}

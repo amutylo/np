@@ -18,6 +18,7 @@ const RenderCategoryMenu = (props) => {
                 iconPosClass="left-icon"
                 key={index}
                 path={item.entityUrl.path}
+                index={index}
               />
             );
           })}

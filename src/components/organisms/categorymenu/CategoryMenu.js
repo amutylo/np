@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getCategoryMenuItems } from "../../../logic/Api";
 import RenderCategoryMenu from "./RenderCategoryMenu";
+import "./CategoryMenu.css";
 
 const homeCategory = {
   entityLabel: "Home Feed",

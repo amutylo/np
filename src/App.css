@@ -15,7 +15,7 @@
 } */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   font-size: 16px;
   padding: 0;
@@ -54,10 +54,10 @@ button {
   bottom: 0;
   width: 320px;
   background: #fff;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .scroll-wrapper {
@@ -73,68 +73,6 @@ button {
   overflow: hidden;
 }
 
-.main-nav {
-  height: 100%;
-  overflow: auto;
-}
-
-.main-nav li:first-child {
-  border-top: 1px solid #eee;
-}
-
-.main-nav button {
-  width: 100%;
-  background: #55bca6;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  line-height: 50px;
-  cursor: pointer;
-}
-
-.main-nav button:hover {
-  background: #4da592;
-}
-
-.main-nav button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-.save-settings {
-  padding-top: 10px;
-}
-
-.settings-description {
-  font-size: 14px;
-  color: #424242;
-  padding: 0 26px;
-  margin-bottom: 15px;
-}
-
-.btn-wrapper {
-  padding: 0 25px;
-}
-
-.asideMenu {
-  margin-bottom: 15px;
-}
-
-.asideMenu li {
-  padding: 3px 0;
-}
-
-.asideMenu a {
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.asideMenu a:hover {
-  text-decoration: underline;
-}
-
-
 .footer-aside-nav {
   padding-left: 25px;
   position: absolute;
@@ -143,7 +81,7 @@ button {
 
 .content::after {
   display: block;
-  content: '';
+  content: "";
   clear: both;
 }
 
@@ -187,7 +125,6 @@ button {
   }
 }
 
-
 .backtotop {
   background: url(./components/assets/backtotop.png) no-repeat center center;
   bottom: 80px;
@@ -196,7 +133,7 @@ button {
   height: 70px;
   position: fixed;
   right: 120px;
-  text-indent:-9999px;
+  text-indent: -9999px;
   width: 70px;
   z-index: 1;
 }
@@ -205,54 +142,30 @@ button {
   opacity: 0.8;
 }
 
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .backtotop {
     background: url(./components/assets/backtotop2x.png) no-repeat center center;
     background-size: 70px 70px;
   }
-
 }
 
-.backtotop { background: #00BFA5; border-radius: 50%;}
-.backtotop:after { width: 25px; height: 25px; border-top: 2px solid #fff; border-right: 2px solid #fff; position: absolute; top: 29px; left: 23px; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); content: ''; }
-
-
-.copyright {
-  font-size: 12px;
+.backtotop {
+  background: #00bfa5;
+  border-radius: 50%;
 }
-
-.copyright a {
-  color: #55bca6;
-  text-decoration: none;
-}
-
-
-.logo {
+.backtotop:after {
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   position: absolute;
-  top: 30px;
-  left: 25px;
-  width: 270px;
-}
-
-.logo img {
-  width: 100%;
-}
-
-@media (max-width: 1365px) {
-  .logo {
-    top: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .logo {
-    width: 225px;
-    top: 15px;
-    left: 15px;
-  }
+  top: 29px;
+  left: 23px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  content: "";
 }
 
 .reset-list {
@@ -277,7 +190,7 @@ button {
 .content {
   padding: 25px;
   background: #fff;
-  margin-bottom: 29px
+  margin-bottom: 29px;
 }
 
 .header {
@@ -322,7 +235,7 @@ button {
 
 .footer::after {
   clear: both;
-  content: '';
+  content: "";
   display: block;
 }
 
@@ -332,7 +245,7 @@ button {
 }
 
 .liked {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .social .counter {
@@ -348,7 +261,7 @@ button {
 }
 
 .social .counter::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 7px;
   height: 7px;
@@ -391,7 +304,7 @@ button {
 }
 
 .share-btn:hover span {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .share-icon {
@@ -409,7 +322,7 @@ button {
   transform-origin: 0 50%;
   white-space: nowrap;
   overflow: hidden;
-  transition: .3s all;
+  transition: 0.3s all;
   opacity: 0;
 }
 
@@ -498,18 +411,6 @@ button {
   }
 }
 
-.left-icon {
-  position: absolute;
-  font-size: 15px;
-  left: 25px;
-  top: 50%;
-  color: #55bca6;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .link {
   text-transform: uppercase;
   overflow: hidden;
@@ -589,98 +490,3 @@ button {
     right: 17px;
   }
 }
-
-/*input and form elements*/
-.Input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.Label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
-}
-
-/* .InputElement {
-  outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
-  font: inherit;
-  padding: 6px 10px;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-} */
-
-.InputElement {
-  padding: 0 15px;
-  border: 1px solid #eee;
-  width: 100%;
-  height: 48px;
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-family: 'Lato';
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.InputElement:focus {
-  outline: none;
-  background-color: #ccc;
-}
-
-.Invalid {
-  border: 1px solid red;
-  background-color: #fda49a;
-}
-
-.form-required::after {
-  content: '\f069';
-  font-family: 'fontawesome';
-  font-weight: normal;
-  vertical-align: top;
-  font-size: 8px;
-  margin: 0 0.3em;
-  display: inline-block;
-  color: #757575;
-}
-
-.label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-family: 'Lato';
-  text-transform: uppercase;
-}
-
-.text-area {
-  padding: 15px;
-  height: 210px;
-  border: 1px solid #eee;
-  resize: vertical;
-  width: 100%;
-  font-family: 'Lato';
-  font-size: 16px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  margin-bottom: 5px;
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-.form-checkbox {
-  display: none;
-}
-
-.form-checkbox:checked + .label::before {
-  background: #55bca6;
-  border: 1px solid #55bca6;
-}
-
-.form-checkbox:checked + .label::after {
-  display: block;
-}
-
-
