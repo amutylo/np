@@ -2,17 +2,11 @@ import React, { useContext, useEffect } from "react";
 import "./MobileHeader.css";
 import { GlobalContext } from "../../../contexts/GlobalContext";
 import { SET_MOBILE, SET_TITLE } from "../../../reducers/types";
+import { checkMobile, getTitle } from "../../../utils/utils";
 
 const MobilHeader = () => {
   const { state, dispatch } = useContext(GlobalContext);
   console.log(state);
-  const checkMobile = () => {
-    return window.innerWidth > 1365 ? false : true;
-  };
-
-  const getTitle = (title) => {
-    return title ? title : "Home Feed";
-  };
 
   useEffect(() => {
     const isMobile = checkMobile();
@@ -20,10 +14,9 @@ const MobilHeader = () => {
 
     const newTitle = getTitle(state.title);
     dispatch({ type: SET_TITLE, payload: newTitle });
-  }, []);
+  }, [state.isMobile, state.title, dispatch]);
 
   if (state.isMobile /*&& !searchOpened*/) {
-    console.log("title: ", state.title);
     return (
       <div className="mobile">
         <div

@@ -2,11 +2,6 @@ import React from "react";
 import propTypes from "prop-types";
 import "./MenuCheckBox.css";
 
-const toggleCategoryStatus = (e) => {
-  e.preventDefault();
-  console.log("toggleCategoryStatus");
-};
-
 const MenuCheckBox = (props) => {
   const { value } = props;
   const isActive = props.value ? "active" : "";
