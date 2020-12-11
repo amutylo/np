@@ -15,7 +15,6 @@ const homeCategory = {
 
 const CategoryMenu = (props) => {
   const [items, setItems] = useState();
-
   useEffect(() => {
     getCategoryMenuItems()
       .then((res) => {

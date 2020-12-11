@@ -13,9 +13,9 @@ import CategoryMenu from "../components/organisms/categorymenu/CategoryMenu";
 import Content from "../components/organisms/content/Content";
 import Header from "../components/organisms/header/Header";
 import SearchForm from "../components/organisms/searchform/SearchForm";
-import CategoryContextProvider from "../contexts/CategoryContext";
 import MobilHeader from "../components/organisms/mobileheader/MobileHeader";
 import List from "../components/organisms/list/List";
+import GlobalContextProvider from "../contexts/GlobalContext";
 
 const logoData = {
   src: logo,
@@ -23,35 +23,37 @@ const logoData = {
 
 const Layout = () => (
   <div>
-    <Sidebar>
-      <Logo>
-        <Image imageData={logoData} />
-      </Logo>
-      <CategoryContextProvider>
+    <GlobalContextProvider>
+      <Sidebar>
+        <Logo>
+          <Image imageData={logoData} />
+        </Logo>
+
         <CategoryMenu />
-      </CategoryContextProvider>
-      <Aside>
-        <Footer>
-          <Menu>
-            <Leftmenu />
-          </Menu>
-          © 2020{" "}
-          <Button as="a" href={"/app"}>
-            News Portal
-          </Button>
-          . All rights reserved.
-        </Footer>
-      </Aside>
-    </Sidebar>
-    <Wrapper>
-      <Header>
-        <MobilHeader />
-        <SearchForm />
-      </Header>
-      <Content>
-        <List />
-      </Content>
-    </Wrapper>
+
+        <Aside>
+          <Footer>
+            <Menu>
+              <Leftmenu />
+            </Menu>
+            © 2020{" "}
+            <Button as="a" href={"/app"}>
+              News Portal
+            </Button>
+            . All rights reserved.
+          </Footer>
+        </Aside>
+      </Sidebar>
+      <Wrapper>
+        <Header>
+          <MobilHeader />
+          <SearchForm />
+        </Header>
+        <Content>
+          <List />
+        </Content>
+      </Wrapper>
+    </GlobalContextProvider>
   </div>
 );
 

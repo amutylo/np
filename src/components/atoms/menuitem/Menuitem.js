@@ -5,7 +5,6 @@ import "./MenuItem.css";
 import MenuCheckBox from "../../organisms/menucheckbox/MenuCheckBox";
 
 const Menuitem = (props) => {
-  console.log(props);
   return (
     <li className={props.liClass}>
       <Icon
