@@ -15,6 +15,7 @@ import Header from "../components/organisms/header/Header";
 import SearchForm from "../components/organisms/searchform/SearchForm";
 import MobilHeader from "../components/organisms/mobileheader/MobileHeader";
 import List from "../components/organisms/list/List";
+import Overlay from "../components/organisms/overlay/Overlay";
 import GlobalContextProvider from "../contexts/GlobalContext";
 
 const logoData = {
@@ -53,6 +54,7 @@ const Layout = () => (
           <List />
         </Content>
       </Wrapper>
+      <Overlay />
     </GlobalContextProvider>
   </div>
 );
