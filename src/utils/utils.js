@@ -11,4 +11,9 @@ const toggleCategoryStatus = (e) => {
   console.log("toggleCategoryStatus");
 };
 
-export { getTitle, checkMobile, toggleCategoryStatus };
+const getHomeFeedCategories = (feed) => {
+  if (!feed || !feed.length) return;
+  return feed.filter((category) => !!category.val).map((item) => item.entityId);
+};
+
+export { getTitle, checkMobile, toggleCategoryStatus, getHomeFeedCategories };

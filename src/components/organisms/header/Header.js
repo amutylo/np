@@ -5,7 +5,7 @@ import "./Header.css";
 const Header = (props) => <header className="header">{props.children}</header>;
 
 Header.propTypes = {
-  children: propTypes.element.isRequired,
+  children: propTypes.arrayOf(propTypes.element),
 };
 
 export default Header;

@@ -1,4 +1,10 @@
-import { SET_MOBILE, SET_SEARCH, SET_TITLE } from "./types";
+import {
+  SET_MOBILE,
+  SET_SEARCH,
+  SET_TITLE,
+  SET_CATEGORIES,
+  SET_MENU_LINKS,
+} from "./types";
 
 export const globalReducer = (state, action) => {
   switch (action.type) {
@@ -12,6 +18,16 @@ export const globalReducer = (state, action) => {
       return {
         ...state,
         title: action.payload,
+      };
+    case SET_CATEGORIES:
+      return {
+        ...state,
+        categories: action.payload,
+      };
+    case SET_MENU_LINKS:
+      return {
+        ...state,
+        menu_links: action.payload,
       };
     case SET_SEARCH:
     default:

@@ -6,7 +6,6 @@ import { checkMobile, getTitle } from "../../../utils/utils";
 
 const MobilHeader = () => {
   const { state, dispatch } = useContext(GlobalContext);
-  console.log(state);
 
   useEffect(() => {
     const isMobile = checkMobile();
